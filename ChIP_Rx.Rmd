@@ -24,25 +24,20 @@ library(data.table)
 
 # 10T K36me2 ChIP_Rx {.tabset}
 
-## Barplot
+## Per condition stats
 ```{r,chip_rx,echo = FALSE,fig.show = "hold", out.width = "100%", fig.align = "default"}
 imageList <- list.files("~/Documents/NSD_OE/pushed_images/chip_rx/me2", pattern= "*.png", full.names=T)
 include_graphics(imageList,dpi = 600)
 ```
 
-## Table
-
-### Individual samples
 ```{r,echo = FALSE,fig.show = "hold", out.width = "100%", fig.align = "default"}
-rx_table <- fread("~/Documents/NSD_OE/data/chip_rx/10T/10T_ChIP_Rx_including_OE_cell_lines.csv")
+rx_table <- fread("~/Documents/NSD_OE/data/chip_rx/10T/10T_ChIP_Rx_including_OE_stats.csv")
 rx_table %>% reactable()
 ```
 
----
-
-### Stats per condition
+## Individual sample stats
 ```{r,echo = FALSE,fig.show = "hold", out.width = "100%", fig.align = "default"}
-rx_table <- fread("~/Documents/NSD_OE/data/chip_rx/10T/10T_ChIP_Rx_including_OE_stats.csv")
+rx_table <- fread("~/Documents/NSD_OE/data/chip_rx/10T/10T_ChIP_Rx_including_OE_cell_lines.csv")
 rx_table %>% reactable()
 ```
 
