@@ -1,0 +1,7 @@
+name: ""
+navbar:
+  title: "NSD Overexpression Analyses"
+  left:
+    - text: "Table of contents"
+      href: index.html
+output_dir: "docs"
